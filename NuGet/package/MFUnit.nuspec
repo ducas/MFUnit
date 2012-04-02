@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>MFUnit</id>
+    <version>0.1</version>
+    <title>MFUnit</title>
+    <authors>Ducas Francis</authors>
+    <owners>Ducas Francis</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>.Net Micro Framework Unit Testing Library</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2012</copyright>
+    <tags>netmf testing assert plugin micro embedded netduino micro-framework hardware</tags>
+  </metadata>
+</package>
