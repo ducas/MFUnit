@@ -44,3 +44,36 @@ Running Tests
 -------------
 
 Simply hit F5! Then watch the emulator count through your tests. If you have failed tests, open the Output window in Visual Studio and spend a minute (or 10) going through the Debug messages. Look for lines that start with "FAIL".
+
+Tests that pass will be displayed as `PASS [TestClass].[TestMethod]`. Tests that failed will be displayed as `FAIL [TestClass].[TestName]: [Message]`.
+
+Take the following test class:
+
+	public class AssertTests
+	{
+		public void AssertIsNull_ShouldPass_WhenActualIsNull()
+		{
+			Assert.IsNull(1);
+		}
+
+		public void AssertIsNull_ShouldFail_WhenActualIsNotNull()
+		{
+			Assert.Throws(() => Assert.IsNull(1), typeof(AssertException));
+		}
+	}
+
+This will produce the following messages in the Output window's Debug output.
+
+	A first chance exception of type 'MFUnit.AssertException' occurred in MFUnit.dll
+	FAIL AssertTests.AssertIsNull_ShouldPass_WhenActualIsNull: Expected: "null", Actual: "not null".
+		#### Exception MFUnit.AssertException - 0x00000000 (3) ####
+		#### Message: Expected: "null", Actual: "not null".
+		#### MFUnit.Assert::Fail [IP: 0005] ####
+		#### MFUnit.Assert::IsNull [IP: 000f] ####
+		#### MFUnit.Tests.AssertTests::<AssertIsNull_ShouldFail_WhenActualIsNotNull>b__0 [IP: 0007] ####
+		#### MFUnit.Assert::Throws [IP: 0006] ####
+		#### MFUnit.Tests.AssertTests::AssertIsNull_ShouldFail_WhenActualIsNotNull [IP: 0021] ####
+		#### System.Reflection.MethodBase::Invoke [IP: 0000] ####
+		#### MFUnit.TestRun::Execute [IP: 00b6] ####
+	A first chance exception of type 'MFUnit.AssertException' occurred in MFUnit.dll
+	PASS AssertTests.AssertIsNull_ShouldFail_WhenActualIsNotNull
