@@ -53,27 +53,24 @@ Take the following test class:
 	{
 		public void AssertIsNull_ShouldPass_WhenActualIsNull()
 		{
-			Assert.IsNull(1);
+			Assert.IsNull(null);
 		}
 
 		public void AssertIsNull_ShouldFail_WhenActualIsNotNull()
 		{
-			Assert.Throws(() => Assert.IsNull(1), typeof(AssertException));
+			Assert.IsNull(1);
 		}
 	}
 
 This will produce the following messages in the Output window's Debug output.
 
-	A first chance exception of type 'MFUnit.AssertException' occurred in MFUnit.dll
-	FAIL AssertTests.AssertIsNull_ShouldPass_WhenActualIsNull: Expected: "null", Actual: "not null".
-		#### Exception MFUnit.AssertException - 0x00000000 (3) ####
+	PASS AssertTests.AssertIsNull_ShouldFail_WhenActualIsNull
+	    #### Exception MFUnit.AssertException - 0x00000000 (3) ####
 		#### Message: Expected: "null", Actual: "not null".
 		#### MFUnit.Assert::Fail [IP: 0005] ####
 		#### MFUnit.Assert::IsNull [IP: 000f] ####
-		#### MFUnit.Tests.AssertTests::<AssertIsNull_ShouldFail_WhenActualIsNotNull>b__0 [IP: 0007] ####
-		#### MFUnit.Assert::Throws [IP: 0006] ####
-		#### MFUnit.Tests.AssertTests::AssertIsNull_ShouldFail_WhenActualIsNotNull [IP: 0021] ####
+		#### MFUnit.Tests.AssertTests::AssertIsNull_ShouldPass_WhenActualIsNull [IP: 0008] ####
 		#### System.Reflection.MethodBase::Invoke [IP: 0000] ####
 		#### MFUnit.TestRun::Execute [IP: 00b6] ####
 	A first chance exception of type 'MFUnit.AssertException' occurred in MFUnit.dll
-	PASS AssertTests.AssertIsNull_ShouldFail_WhenActualIsNotNull
+	FAIL AssertTests.AssertIsNull_ShouldPass_WhenActualIsNotNull: Expected: "null", Actual: "not null".
