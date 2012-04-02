@@ -16,12 +16,14 @@ Getting Started
 
 1. Create a Micro Framework Console Application for your tests.
 2. Add a reference to MFUnit and Microsoft.SPOT.TinyCore.
-3. Make your Program class inherit TestApplication and add the following code to your Main entry point method:
+3. Make your Program class inherit TestApplication and add the code after this list to your Main entry point method:
+4. Write your tests
+
+Your main should look like this:
 
 	var app = new Program();
 	app.Run(Assembly.GetAssembly(typeof(Program)));
 
-Finally, Write your tests.
 
 Writing Tests
 -------------
