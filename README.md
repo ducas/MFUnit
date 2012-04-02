@@ -6,12 +6,13 @@ A .Net Micro Framework Unit Testing Library.
 Getting Started
 ---------------
 
-*** NuGet
+### NuGet Installation
+
 1. Create a Micro Framework Console Application for your tests.
 2. Install-Package MFUnit
 3. Profit!
 
-*** Manual Installation
+### Manual Installation
 
 1. Create a Micro Framework Console Application for your tests.
 2. Add a reference to MFUnit and Microsoft.SPOT.TinyCore.
