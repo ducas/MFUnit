@@ -18,8 +18,10 @@ Getting Started
 2. Add a reference to MFUnit and Microsoft.SPOT.TinyCore.
 3. Make your Program class inherit TestApplication and add the following code to your Main entry point method:
 
+	#+BEGIN_EXAMPLE
 	var app = new Program();
 	app.Run(Assembly.GetAssembly(typeof(Program)));
+	#+END_EXAMPLE
 
 4. Write your tests.
 
