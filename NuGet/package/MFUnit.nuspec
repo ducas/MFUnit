@@ -2,13 +2,13 @@
 <package >
   <metadata>
     <id>MFUnit</id>
-    <version>0.1</version>
+    <version>0.2</version>
     <title>MFUnit</title>
     <authors>Ducas Francis</authors>
     <owners>Ducas Francis</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>.Net Micro Framework Unit Testing Library</description>
-    <releaseNotes>Initial release.</releaseNotes>
+    <releaseNotes>Simplified the bootstrapper for test runs by determining the test assembly in the TestApplication constructor.</releaseNotes>
     <copyright>Copyright 2012</copyright>
     <tags>netmf testing assert plugin micro embedded netduino micro-framework hardware</tags>
   </metadata>

@@ -1,6 +1,4 @@
-using System;
-using Microsoft.SPOT;
-using System.Reflection;
+using MFUnit;
 
 namespace MFUnit.Tests
 {
@@ -8,8 +6,7 @@ namespace MFUnit.Tests
     {
         public static void Main()
         {
-            var app = new Program();
-            app.Run(Assembly.GetAssembly(typeof(Program)));
+            new Program().Run();
         }
     }
 }

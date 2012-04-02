@@ -1,6 +1,4 @@
-using System;
-using Microsoft.SPOT;
-using System.Reflection;
+using MFUnit;
 
 namespace $rootnamespace$
 {
@@ -8,8 +6,7 @@ namespace $rootnamespace$
     {
         public static void Main()
         {
-            var app = new TestProgram();
-            app.Run(Assembly.GetAssembly(typeof(TestProgram)));
+            new TestProgram().Run();
         }
     }
 }

@@ -10,10 +10,18 @@ namespace MFUnit
     {
         public Assembly TestAssembly { get; set; }
 
-        public void Run(Assembly testAssembly)
+        public TestApplication()
+        {
+            TestAssembly = Assembly.GetAssembly(this.GetType());
+        }
+
+        public TestApplication(Assembly testAssembly)
         {
             this.TestAssembly = testAssembly;
+        }
 
+        public new void Run()
+        {
             Run(new Window() { Height = SystemMetrics.ScreenHeight, Width = SystemMetrics.ScreenWidth, Visibility = Visibility.Visible });
         }
 

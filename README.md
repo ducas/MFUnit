@@ -12,6 +12,8 @@ Getting Started
 2. Install-Package MFUnit
 3. Profit!
 
+NOTE: The NuGet installer will create a class named TestProgram that inherits MFUnit.TestApplication which kicks off the TestRun. If you want to write your own bootstrapper or use an existing entry point then delete this class or set the Startup Object in your Project Properties. Otherwise, simply delete your Program class and you're on your way!
+
 ### Manual Installation
 
 1. Create a Micro Framework Console Application for your tests.
@@ -19,10 +21,9 @@ Getting Started
 3. Make your Program class inherit TestApplication and add the code after this list to your Main entry point method.
 4. Write your tests
 
-Your main should look like this:
+Your Main method should look like this:
 
-	var app = new Program();
-	app.Run(Assembly.GetAssembly(typeof(Program)));
+	new Program().Run();
 
 
 Writing Tests
