@@ -18,10 +18,10 @@ Getting Started
 2. Add a reference to MFUnit and Microsoft.SPOT.TinyCore.
 3. Make your Program class inherit TestApplication and add the following code to your Main entry point method:
 
-     var app = new Program();
-     app.Run(Assembly.GetAssembly(typeof(Program)));
+	var app = new Program();
+	app.Run(Assembly.GetAssembly(typeof(Program)));
 
-4. Write your tests.
+Finally, Write your tests.
 
 Writing Tests
 -------------
@@ -30,13 +30,13 @@ MFUnit uses convention to discover tests. It looks for classes ending in the wor
 
 Using the Assert static class, you can ensure your methods return the correct results. E.g.
 
-     public class SampleTests
-     {
-          public void AddNumbers()
-          {
-               Assert.AreEqual(2, 1 + 1);
-          }
-     }
+	public class SampleTests
+	{
+		public void AddNumbers()
+		{
+			Assert.AreEqual(2, 1 + 1);
+		}
+	}
 
 Running Tests
 -------------
