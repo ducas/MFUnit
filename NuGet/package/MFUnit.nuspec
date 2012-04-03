@@ -6,6 +6,7 @@
     <title>MFUnit</title>
     <authors>Ducas Francis</authors>
     <owners>Ducas Francis</owners>
+    <projectUrl>https://github.com/ducas/MFUnit</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>.Net Micro Framework Unit Testing Library</description>
     <releaseNotes>Simplified the bootstrapper for test runs by determining the test assembly in the TestApplication constructor.</releaseNotes>
