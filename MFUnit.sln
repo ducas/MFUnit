@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MFUnit", "MFUnit\MFUnit.csproj", "{EC81132A-FCC6-4294-B60E-B62E4A908C43}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MFUnit.Tests", "MFUnit.Tests\MFUnit.Tests.csproj", "{4E722DBA-63DF-4062-8A69-F32E33EA921F}"
