@@ -1,2 +1,2 @@
-xcopy /s /y %~dp0..\MFUnit\bin\Debug\* .\package\lib\netmf41
+robocopy %~dp0..\MFUnit\bin\Debug\ .\package\lib\ /S
 nuget pack .\package\MFUnit.nuspec
