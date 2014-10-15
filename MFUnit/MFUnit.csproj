@@ -8,12 +8,13 @@
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{EC81132A-FCC6-4294-B60E-B62E4A908C43}</ProjectGuid>
-    <TargetFrameworkVersion Condition="$(TargetFrameworkVersion) == ''">v4.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion Condition="$(TargetFrameworkVersion) == ''">v4.3</TargetFrameworkVersion>
     <NetMfTargetsBaseDir Condition="'$(NetMfTargetsBaseDir)'==''">$(MSBuildExtensionsPath32)\Microsoft\.NET Micro Framework\</NetMfTargetsBaseDir>
     <!-- Take the target framework version and sanitize it for use with NuGet -->
     <NugetVersion>netmf$(TargetFrameworkVersion.Replace('.', '').Replace('v', ''))</NugetVersion>
     <!-- Override the standard obj directory so we don't get cache clashes -->
     <IntermediateOutputPath>obj\$(NugetVersion)\</IntermediateOutputPath>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -74,6 +75,6 @@
     <!--<MSBuild Condition="'$(TargetFrameworkVersion)' != 'v4.2'" 
              Projects="$(MSBuildProjectFile)"
              Properties="TargetFrameworkVersion=v4.2;Configuration=$(Configuration);Platform=$(Platform)" />-->
-    <Exec Condition="'$(TargetFrameworkVersion)' != 'v4.2'" Command="$(MSBuildBinPath)\msbuild.exe $(MSBuildProjectFile) /p:TargetFrameworkVersion=v4.2;Configuration=$(Configuration);Platform=$(Platform)" />
+    <Exec Condition="'$(TargetFrameworkVersion)' != 'v4.3'" Command="$(MSBuildBinPath)\msbuild.exe $(MSBuildProjectFile) /p:TargetFrameworkVersion=v4.3;Configuration=$(Configuration);Platform=$(Platform)" />
   </Target>
 </Project>
